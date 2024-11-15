@@ -27,15 +27,15 @@ const Profile = () => {
     } else {
       fetchUserCars();
     }
-    console.log("ijnfiuwe foweoifwoej");
+    // console.log("ijnfiuwe foweoifwoej");
   }, [isAuthenticated, user , login]);
 
   const fetchUserCars = async () => {
-    console.log("bjfb wfius fisfb wuif");
+    // console.log("bjfb wfius fisfb wuif");
     try {
-        console.log("bjfb wfius fisfb wuif 22");
+        // console.log("bjfb wfius fisfb wuif 22");
         setLoading(true);
-        const response = await axios.get(`http://localhost:5000/api/users/user/${user.id}`, {
+        const response = await axios.get(`https://car-management-backend-alpha.vercel.app/api/users/user/${user.id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setUserCars(response.data);
